@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cats</title>
+        <meta name="description" content="A brief description">
+        <meta name="Author" content="Your site name">
+
+        <!-- Open Graph Protocol. These 4 are required for social media platforms -->
+
+        <!-- <meta property="og:title" content="A brief description">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.mysite">
+        <meta property="og:description" content="A brief description">
+        <meta property="og:image" content="image.png"> -->
+
+        <!-- These are optional meta tags -->
+        <!-- <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes with a modern twist.">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Little Lemon"> -->
+
+        <!-- Icons links -->
+
+        <!-- Include the css file here -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <!-- Add you website name or logo here -->
+     
+        </header>
+        <nav>
+            <!-- Add you website navigation here -->
+        </nav>
+        <main>
+            <!-- Add your main content here -->
+            <h1>Cats Page Meow Meow Meow!</h1>
+            <ul>
+                <% for(let cat of cats) { %>
+                    <li><%= cat %></li>
+                <% } %>
+            </ul>
+        </main>
+        <footer>
+            <!-- Add copyright notices and other footer content here -->
+            <p>Footer</p>
+        </footer>
+
+        <!-- Include you javascript files here -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
