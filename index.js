@@ -11,7 +11,13 @@ const log = console.log;
 // });
 
 app.get('/', (req, res) => {
-    res.send("This is the home page!");
+    res.send("Welcome to the home page!");
+});
+
+// path parameter example
+app.get('/r/:subreddit', (req, res) => {
+    const { subreddit } = req.params;
+    res.send(`<h1>Browsing the ${ subreddit } subreddit</h1>`);
 });
 
 // path parameter router example
@@ -31,6 +37,12 @@ app.post('/cats', (req, res) => {
 
 app.get('/dogs', (req, res) => {
     res.send("WOOF!");
+});
+
+// query string example
+app.get('/search', (req, res) => {
+    const {q} = req.query;
+    res.send(`<h1>Search results for ${q}</h1>`);
 });
 
 app.get('*', (req, res) => {
