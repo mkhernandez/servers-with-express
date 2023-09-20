@@ -1,8 +1,14 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const port = 5000;
 const hostName = "localhost";
 const log = console.log;
+
+// Setting ejs for our view engine
+// Must install with npm i ejs
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views')); // set the path so that file can be ran from any directory
 
 // commented out so that it doesn't interfere with our routes
 // app.use((req, res) => {
@@ -11,7 +17,7 @@ const log = console.log;
 // });
 
 app.get('/', (req, res) => {
-    res.send("Welcome to the home page!");
+    res.render('home');
 });
 
 // path parameter example
