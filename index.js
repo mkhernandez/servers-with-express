@@ -40,8 +40,12 @@ app.get('/rand', (req, res) => {
     res.render('random', {number});
 });
 
+// Simple looping example with the cats route
 app.get('/cats', (req, res) => {
-    res.send("MEOW!");
+    const cats = [
+        'Blue', 'Orange', 'Harry', 'Belvedere', 'Sherman', 'Tuxedo'
+    ];
+    res.render('cats', {cats});
 });
 
 app.post('/cats', (req, res) => {
