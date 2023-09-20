@@ -14,6 +14,13 @@ app.get('/', (req, res) => {
     res.send("This is the home page!");
 });
 
+// path parameter router example
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const { subreddit, postId } = req.params;
+    log(req.params);
+    res.send(`<h1>Viewing postId: ${postId} on the ${subreddit.toUpperCase()} SUBREDDIT</h1>`);
+});
+
 app.get('/cats', (req, res) => {
     res.send("MEOW!");
 });
