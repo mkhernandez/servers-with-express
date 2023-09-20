@@ -33,6 +33,13 @@ app.get('/r/:subreddit/:postId', (req, res) => {
     res.send(`<h1>Viewing postId: ${postId} on the ${subreddit.toUpperCase()} SUBREDDIT</h1>`);
 });
 
+// passing data to templates
+// leave out as much logic so that our templates are generic
+app.get('/rand', (req, res) => {
+    const number = Math.floor(Math.random() * 10) + 1;
+    res.render('random', {number});
+});
+
 app.get('/cats', (req, res) => {
     res.send("MEOW!");
 });
