@@ -6,16 +6,21 @@ const port = 5000;
 const hostName = "localhost";
 const log = console.log;
 
+// Serving static assets
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Setting ejs for our view engine
 // Must install with npm i ejs
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views')); // set the path so that file can be ran from any directory
+app.set('views', path.join(__dirname, 'views')); // set the path so that file can be ran from any directory
 
 // commented out so that it doesn't interfere with our routes
 // app.use((req, res) => {
 //     log("We got a new request!");
 //     res.send("<h1>We got your request. This is the response!</h1>");
 // });
+
+
 
 app.get('/', (req, res) => {
     res.render('home');
