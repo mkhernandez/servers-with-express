@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= name %></title>
-    <link rel="stylesheet" href="/app.css">
-</head>
+// The following line of code can utilize a partial file(ie. head) so that we can separate out
+// and reduce duplicate code. We can also create a navbar file or include it in the head file. We can also
+// create a foot file that will have all the footer and ending html tag. Partials directory is in
+// the views directory.
+<%- include('partials/head') %>
 <body>
     <h2><%= description %></h2>
     <% for(let post of posts) { %>
